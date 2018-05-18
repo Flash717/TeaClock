@@ -19,35 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tea Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-lk-Vvq">
-                                <rect key="frame" x="30" y="50" width="315" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="70" width="315" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkP-ek-41p">
-                                <rect key="frame" x="30" y="121" width="315" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="158.5" width="315" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dms-DB-ADb">
-                                <rect key="frame" x="30" y="172" width="315" height="30"/>
+                                <rect key="frame" x="30" y="237.5" width="315" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="btnActionClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbB-Go-gWs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-9g-RV7">
-                                <rect key="frame" x="30" y="232" width="315" height="30"/>
+                                <rect key="frame" x="30" y="317.5" width="315" height="30"/>
                                 <state key="normal" title="Black Tea">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnResetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Emc-cd-Ma3"/>
+                                    <action selector="btnBlackTeaClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1IH-Bn-HAb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IL-Fy-BCy">
-                                <rect key="frame" x="30" y="282" width="315" height="30"/>
+                                <rect key="frame" x="30" y="367.5" width="315" height="30"/>
                                 <state key="normal" title="Green Tea">
                                     <color key="titleColor" red="0.17064136508965805" green="0.75366337435233155" blue="0.15124206474183011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYU-s2-ugg">
-                                <rect key="frame" x="30" y="332" width="315" height="30"/>
+                                <rect key="frame" x="30" y="417.5" width="315" height="30"/>
                                 <state key="normal" title="White Tea">
                                     <color key="titleColor" red="0.73027235546104752" green="0.74070995908543869" blue="0.75366337435233155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -69,13 +69,13 @@
                         <constraints>
                             <constraint firstItem="dms-DB-ADb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7H7-Ol-coY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HkP-ek-41p" secondAttribute="trailing" constant="30" id="J7E-Yf-8ve"/>
-                            <constraint firstItem="dms-DB-ADb" firstAttribute="top" secondItem="HkP-ek-41p" secondAttribute="bottom" constant="30" id="MRs-zv-xY9"/>
+                            <constraint firstItem="dms-DB-ADb" firstAttribute="top" secondItem="HkP-ek-41p" secondAttribute="bottom" constant="50" id="MRs-zv-xY9"/>
                             <constraint firstItem="nYU-s2-ugg" firstAttribute="top" secondItem="6IL-Fy-BCy" secondAttribute="bottom" constant="20" id="Mlc-d6-4qg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dms-DB-ADb" secondAttribute="trailing" constant="30" id="QSW-7D-nZU"/>
                             <constraint firstItem="6IL-Fy-BCy" firstAttribute="top" secondItem="G9q-9g-RV7" secondAttribute="bottom" constant="20" id="RuP-bF-hkT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nYU-s2-ugg" secondAttribute="trailing" constant="30" id="USg-Cp-rXK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ztf-lk-Vvq" secondAttribute="trailing" constant="30" id="UX0-Dn-Zjq"/>
-                            <constraint firstItem="Ztf-lk-Vvq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="X9P-iS-zx2"/>
+                            <constraint firstItem="Ztf-lk-Vvq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="X9P-iS-zx2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G9q-9g-RV7" secondAttribute="trailing" constant="30" id="ZN5-1n-LTd"/>
                             <constraint firstItem="HkP-ek-41p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dUv-oD-CHu"/>
                             <constraint firstItem="6IL-Fy-BCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="f8O-f3-4GB"/>
@@ -84,7 +84,7 @@
                             <constraint firstItem="nYU-s2-ugg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qvB-Sn-C4c"/>
                             <constraint firstItem="HkP-ek-41p" firstAttribute="top" secondItem="Ztf-lk-Vvq" secondAttribute="bottom" constant="50" id="sgZ-ua-bLe"/>
                             <constraint firstItem="G9q-9g-RV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="u4D-SR-c2V"/>
-                            <constraint firstItem="G9q-9g-RV7" firstAttribute="top" secondItem="dms-DB-ADb" secondAttribute="bottom" constant="30" id="woS-Gu-apW"/>
+                            <constraint firstItem="G9q-9g-RV7" firstAttribute="top" secondItem="dms-DB-ADb" secondAttribute="bottom" constant="50" id="woS-Gu-apW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

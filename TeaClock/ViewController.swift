@@ -11,13 +11,14 @@ import AVKit
 
 class ViewController: UIViewController {
     
-    let iDefaultMins: Int = 1;
-    let iGreenTeaMins: Int = 2;
-    let iBlackTeaMins: Int = 5;
-    let iWhiteTeaMins: Int = 1;
+    let iDefaultSecs: Int = 5;
+    let iGreenTeaSecs: Int = 2 * 60;
+    let iBlackTeaSecs: Int = 5 * 60;
+    let iWhiteTeaSecs: Int = 1 * 60;
     var secondsRemaining: Int = 0;
     let sStart: String = "Start"
     let sStop: String = "Stop"
+    let sDone: String = "Your tea is ready!"
     
     let bgTask: UIBackgroundTaskIdentifier = 0
     var tTimer: Timer = Timer()
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        resetTimer(iMins: 0)
+        resetTimer(iSecs: iDefaultSecs)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
     
     func playAlarm() {
         // play some alarm
-        lblTimer.text = "Hooray, it worked!"
+        lblTimer.text = sDone
         let systemSoundId: SystemSoundID = 1016
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
         AudioServicesPlaySystemSound(systemSoundId)
@@ -63,8 +64,8 @@ class ViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, mins, secs)
     }
     
-    func resetTimer(iMins: Int) {
-        secondsRemaining = iMins * 60
+    func resetTimer(iSecs: Int) {
+        secondsRemaining = iSecs
         lblTimer.text = timeString(time: TimeInterval(secondsRemaining))
         if btnAction.title(for: .normal) == sStop {
             tTimer.invalidate()
@@ -93,13 +94,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnBlackTeaClick(_ sender: UIButton) {
-        resetTimer(iMins: iBlackTeaMins)
+        resetTimer(iSecs: iBlackTeaSecs)
     }
     @IBAction func btnGreenTeaClick(_ sender: UIButton) {
-        resetTimer(iMins: iGreenTeaMins)
+        resetTimer(iSecs: iGreenTeaSecs)
     }
     @IBAction func btnWhiteTeaClick(_ sender: UIButton) {
-        resetTimer(iMins: iWhiteTeaMins)
+        resetTimer(iSecs: iWhiteTeaSecs)
     }
 }
 
